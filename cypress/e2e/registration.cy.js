@@ -18,8 +18,8 @@ describe('Student Registration page', () => {
     cy.get('input[id="lastName"]').type('Doe');
     cy.get('input[id="lastName"]').should('have.value', 'Doe');
 
-    cy.get('input[id="userEmail"]').type('name@example.com');
-    cy.get('input[id="userEmail"]').should('have.value', 'name@example.com');
+    cy.get('input[id="userEmail"]').type('john@doe.com');
+    cy.get('input[id="userEmail"]').should('have.value', 'john@doe.com');
 
     // eslint-disable-next-line cypress/no-force
     cy.get('input[id="gender-radio-1"]').check({ force: true });
@@ -29,7 +29,7 @@ describe('Student Registration page', () => {
     cy.get('input[id="userNumber"]').should('have.value', '5551234567');
 
     cy.get('input[id="dateOfBirthInput"]').click();
-    cy.get('.react-datepicker__month-select').type('Apil');
+    cy.get('.react-datepicker__month-select').type('April');
     cy.get('.react-datepicker__year-select').select('2025');
     cy.get('.react-datepicker__day--016').click();
     cy.get('input[id="dateOfBirthInput"]').should('have.value', '16 Apr 2025');
