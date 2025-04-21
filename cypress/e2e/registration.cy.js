@@ -70,7 +70,7 @@ describe('Student Registration page', () => {
       cy.contains('td', 'john@doe.com').should('be.visible');
       cy.contains('td', 'Male').should('be.visible');
       cy.contains('td', '5551234567').should('be.visible');
-      cy.contains('td', '16 April,2025').should('be.visible');
+      cy.contains('td', '16 Apr 2025').should('be.visible');
       cy.contains('td', 'Maths').should('be.visible');
       cy.contains('td', 'Sports').should('be.visible');
       cy.contains('td', '123 Main Street, Springfield').should('be.visible');
